@@ -54,7 +54,7 @@ const useRequest = (request) => {
       )
       .catch(
         (error) =>
-          !cancelled &
+          !cancelled &&
           setDataState({ data: null, loading: false, error: error })
       );
     return () => (cancelled = true);
